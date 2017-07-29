@@ -8,6 +8,9 @@ Plug 'majutsushi/tagbar'
 Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
+Plug 'davidhalter/jedi-vim'
+Plug 'ervandew/supertab'
+
 
 call plug#end()
 
@@ -28,6 +31,9 @@ set shiftround " tab / shifting moves to closest tabstop.
 set autoindent " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
 
+set incsearch
+set hlsearch
+
 let mapleader=","
 
 inoremap kj <esc>
@@ -44,6 +50,11 @@ nnoremap <leader><leader> <c-^>
 " create new vsplit, and switch to it.
 noremap <leader>v <C-w>v
 
+" Tagbar!
+nmap <F8> :TagbarToggle<CR> <C-w>l
+
+" Look for tags in any dir going up to home. Stop on first hit.
+set tags=./tags,tags;$HOME
 
 " closes buffer without losing pane
 nnoremap <leader>q :bp <BAR> bd #<CR>
