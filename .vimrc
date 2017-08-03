@@ -65,3 +65,4 @@ nnoremap <leader>q :bp <BAR> bd #<CR>
  nnoremap <C-k> <C-w>k
  nnoremap <C-l> <C-w>l
 
+ set clipboard^=unnamed
